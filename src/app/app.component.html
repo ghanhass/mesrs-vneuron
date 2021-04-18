@@ -1,16 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to use ngx-echarts!
-  </h1>
+<div class="container">
+  <div class="etat-avancement-par-statut diagram">
+      <h3>Etat d'avancement des projets par statut</h3>
+      <app-line-chart  [diagramName]="'etat-avancement-par-statut'" (dataselect)="onEChart1DataSelect($event)" (dataunselect)="onEChart1DataUnselect()" [ChartOptions]="ChartOptions1" (echartrender)='onEChartRender($event)'></app-line-chart>
+  </div>
+
+  <div #etatAvancementParStatutDetail class="etat-avancement-par-statut-detail diagram" style="opacity:0">
+      <h3 class="title">{{echart2Title}}</h3>
+      <app-line-chart #etatAvancementParStatutDetailChart [diagramName]="'etat-avancement-par-statut-detail'" [ChartOptions]="ChartOptions2"></app-line-chart>
+  </div>
 </div>
-
-<h3>Easy to show an echarts: </h3>
-<div echarts [options]="options" class="chart"></div>
-
-<h3>Easy to choose a theme: </h3>
-<div echarts [options]="options" theme="macarons" class="chart"></div>
-
-<h3>Easy to update data asynchronous: <button (click)="getData()" style="padding: 0.5em;">Get Data</button></h3>
-<div echarts [options]="options" [merge]="mergeOption" [loading]="loading" class="chart"></div>
-

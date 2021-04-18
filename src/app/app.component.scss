@@ -5,3 +5,33 @@
 .chart-lg {
   height: 700px;
 }
+
+.diagram{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  height:500px;
+  width: 50%;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+app-line-chart{
+  width:100%;
+  flex-grow: 1;
+  border: 1px solid #8080804f;
+}
+
+.container{
+  display: flex;
+}
+
+@media screen and (max-width:767px){
+  .container{
+    flex-direction: column;
+  }
+
+  .diagram{
+    width:100%;
+  }
+}
