@@ -223,7 +223,7 @@ ChartOptions4: any = {
     show:true
   },*/
   grid: {
-    top:5,
+    top:22,
     left: 10,
     right: 10,
     bottom: 60,
@@ -274,6 +274,16 @@ ChartOptions4: any = {
 
 ChartOptions5: any = {
   //color:["#5470c6"],
+  title:{
+    show:true,
+    text:"% des bénéficiaires par type",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
   tooltip: {
       trigger: 'item',
       /*axisPointer: {            // Use axis to trigger tooltip
@@ -286,7 +296,7 @@ ChartOptions5: any = {
       show:false
   },
   grid: {
-    top:5,
+    top:22,
     left: 10,
     right: 10,
     bottom: 60,
