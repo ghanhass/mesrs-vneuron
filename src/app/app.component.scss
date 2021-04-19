@@ -10,20 +10,29 @@
   display:flex;
   align-items: center;
   flex-direction: column;
-  height:500px;
-  width: 50%;
-  padding-left:15px;
-  padding-right:15px;
+  /*height:500px;*/
+  width: calc(50% - 5px);
+  /*padding-left:15px;*/
+  /*padding-right:15px;*/
+  transition: opacity 0.2s linear;
 }
 
 app-line-chart{
   width:100%;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
   border: 1px solid #8080804f;
 }
 
 .container{
   display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.hidden-diagram{
+  //position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media screen and (max-width:767px){
@@ -33,5 +42,6 @@ app-line-chart{
 
   .diagram{
     width:100%;
+    padding: 0;
   }
 }

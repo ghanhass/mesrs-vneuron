@@ -121,8 +121,13 @@
               "devServerTarget": "ngx-echarts-starter:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ngx-echarts-starter"
 }
