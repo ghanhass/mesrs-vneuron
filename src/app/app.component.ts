@@ -350,6 +350,8 @@ onEChart1DataSelect(data){
     this.ChartOptions2.yAxis.data = projectNames;
     this.ChartOptions2.series[0].data = dataValues;
 
+    this.etatProjetParStatutDetailChart.chartInstance.getDom().scrollIntoView(false);
+    
     this.etatProjetParStatutDetailChart.chartInstance.setOption(this.ChartOptions2);
 
 
@@ -407,6 +409,8 @@ onEChart3DataSelect(data){
 
     //unselect etat-projet-par-cause-alerte-detail1
     this.etatProjetParCauseAlerteDetailChart1.chartInstance.dispatchAction({type: "unselect"});
+    
+    this.etatProjetParCauseAlerteDetailChart1.chartInstance.getDom().scrollIntoView(false);
 
     this.etatProjetParCauseAlerteDetailChart1.chartInstance.setOption(this.ChartOptions4);
 
@@ -466,6 +470,8 @@ onEChart4DataSelect(data){
     this.ChartOptions5.title = title;
     this.ChartOptions5.xAxis.data = projectNames;
     this.ChartOptions5.series[0].data = dataValues;
+
+    this.etatProjetParCauseAlerteDetailChart2.chartInstance.getDom().scrollIntoView(false);
 
     this.etatProjetParCauseAlerteDetailChart2.chartInstance.setOption(this.ChartOptions5);
 
