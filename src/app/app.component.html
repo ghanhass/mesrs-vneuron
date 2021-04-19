@@ -2,13 +2,13 @@
     <div class="logo-wrapper">
         <img src="assets/logo.png">
     </div>
-    <select class="dashboard-select">
+    <select class="dashboard-select" (change)="onDashboardChange($event)">
         <option value="1" selected>KPI Ministère</option>
         <option value="2">KPI Chef de projet</option>
     </select>
 </div>
 <div class="page-container">
-    <div class="ministre-dashboard">
+    <div class="ministre-dashboard-container">
             <div class="container container1">
                     <div class="etat-projet-par-statut diagram">
                         <app-line-chart  [diagramName]="'etat-projet-par-statut'" (dataselect)="onEChart1DataSelect($event)" (dataunselect)="onEChart1DataUnselect()" [ChartOptions]="ChartOptions1"></app-line-chart>
@@ -55,7 +55,7 @@
                   </div>
     </div>
 
-    <div class="chefprojet-dashboard">
+    <div class="chefprojet-dashboard-container">
 
     </div>
 </div>

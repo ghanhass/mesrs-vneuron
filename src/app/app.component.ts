@@ -516,6 +516,21 @@ ngOnInit(){
   
 }
 
+onDashboardChange(event){
+  let selectVal = event.target.value;
+  console.log("selectVal = ", selectVal);
+  let el1 = document.querySelector(".ministre-dashboard-container");
+  let el2 = document.querySelector(".chefprojet-dashboard-container");
+  if(selectVal == "1"){
+    el1.classList.remove("hide");
+    el2.classList.add("hide");
+  }
+  else if(selectVal == "2"){
+    el1.classList.add("hide");
+    el2.classList.remove("hide");
+  }
+}
+
 
 onEChart1DataSelect(data){
   console.log("onEChart1DataSelect data = ", data);
