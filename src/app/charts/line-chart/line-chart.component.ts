@@ -1,6 +1,6 @@
 // line-chart.component.ts
 import { Component, HostListener, Input, AfterViewInit, EventEmitter, Output } from '@angular/core';
-import { EChartsOption, ECharts } from 'echarts';
+import { EChartsOption, ECharts , registerTheme, init} from 'echarts';
 
 @Component({
   selector: 'app-line-chart',

@@ -24,7 +24,7 @@
 </div>
 
 <div class="container">
-    <div #etatProjetParCauseAlerteDetail1 class="etat-projet-par-cause-alerte-detail1 diagram hidden-diagram">
+    <div #etatProjetParCauseAlerteDetail1 class="etat-projet-par-cause-alerte-detail1 diagram">
         <h3 class="title">Pourcentages des bénéficiaires par catégorie</h3>
         <app-line-chart #etatProjetParCauseAlerteDetailChart1 [diagramName]="'etat-projet-par-cause-alerte-detail1'" (dataselect)="onEChart4DataSelect($event)" (dataunselect)="onEChart4DataUnselect()" [ChartOptions]="ChartOptions4"></app-line-chart>
     </div>

@@ -32,7 +32,7 @@ ChartOptions1: any =  {
       {
         //name: 'Countries',
         type: 'pie',
-        radius: '50%',
+        radius: '90%',
         center: ['50%', '50%'],
         data: [
           { value: 15, name: 'En attente de versement'},
@@ -52,6 +52,7 @@ ChartOptions1: any =  {
               color: "#000000",
             },
           },
+          show:false
         },
         labelLine: {
           normal: {
@@ -59,6 +60,7 @@ ChartOptions1: any =  {
               color: "#8c8c8c",
             },
           },
+          show:false
         },
       },
     ],
@@ -231,7 +233,7 @@ ChartOptions4: any = {
         emphasis: {
             focus: 'series'
         },
-        data: [0, 0, 0, 0, 0]
+        data: [60, 20, 10, 50, 50]
       },
   ]
 };
@@ -391,7 +393,7 @@ onEChart1DataUnselect(){
 }
 
 onEChart3DataSelect(data){
-  console.log("onEChart3DataSelect data = ", data);
+  /*console.log("onEChart3DataSelect data = ", data);
   this.selectedDataIndex3 = data;
   let etatProjetParCauseAlerteDetail1_EL: HTMLElement = this.etatProjetParCauseAlerteDetail1.nativeElement;
   if(etatProjetParCauseAlerteDetail1_EL){
@@ -439,19 +441,19 @@ onEChart3DataSelect(data){
 
     console.log("echart3DataName = ", echart3DataName);
     console.log("newEchart4Data = ", newEchart4Data);
-  }
+  }*/
 }
 
 onEChart3DataUnselect(){
   this.selectedDataIndex3 = undefined;
-
+  /*
   let etatProjetParCauseAlerteDetail1_El: HTMLElement = this.etatProjetParCauseAlerteDetail1.nativeElement;
   if(etatProjetParCauseAlerteDetail1_El){
     etatProjetParCauseAlerteDetail1_El.classList.add("hidden-diagram");
   }
-  /******/
+  
   this.etatProjetParCauseAlerteDetailChart1.chartInstance.dispatchAction({type: "unselect"});
-  this.etatProjetParCauseAlerteDetailChart2.chartInstance.dispatchAction({type: "unselect"});
+  this.etatProjetParCauseAlerteDetailChart2.chartInstance.dispatchAction({type: "unselect"});*/
 }
 
 onEChart4DataSelect(data){
