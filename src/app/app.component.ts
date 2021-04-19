@@ -408,8 +408,8 @@ ChartOptions8: any =  {
     selectedMode:false,
     //top:"10%",
     bottom:0,
-    left:10,
-    right:10,
+    left:"center",
+    right:"center",
     width:"100%"
   },
   series: [
@@ -454,8 +454,8 @@ ChartOptions9: any =  {
     selectedMode:false,
     //top:"10%",
     bottom:0,
-    left:10,
-    right:10,
+    left:"center",
+    right:"center",
     width:"100%"
   },
   series: [
