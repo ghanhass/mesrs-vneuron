@@ -1,44 +1,61 @@
-<div class="container container1">
-  <div class="etat-projet-par-statut diagram">
-      <app-line-chart  [diagramName]="'etat-projet-par-statut'" (dataselect)="onEChart1DataSelect($event)" (dataunselect)="onEChart1DataUnselect()" [ChartOptions]="ChartOptions1"></app-line-chart>
-  </div>
-
-  <div #etatProjetParStatutDetail class="etat-projet-par-statut-detail diagram" style="width:22%">
-      <h3 class="title"></h3>
-      <app-line-chart #etatProjetParStatutDetailChart [diagramName]="'etat-projet-par-statut-detail'" [ChartOptions]="ChartOptions2"></app-line-chart>
-  </div>
-
-  <div class="etat-projet-par-cause-alerte diagram" style="width:31%">
-        <app-line-chart  [diagramName]="'etat-projet-par-cause-alerte'" (dataselect)="onEChart3DataSelect($event)" (dataunselect)="onEChart3DataUnselect()" [ChartOptions]="ChartOptions3"></app-line-chart>
+<div class="header">
+    <div class="logo-wrapper">
+        <img src="assets/logo.png">
     </div>
-    <div class="nbr-beneficiaires-fct-temps diagram" style="width:22%">
-        <app-line-chart  [diagramName]="'nbr-beneficiaires-fct-temps'" [ChartOptions]="ChartOptions6"></app-line-chart>
-    </div>
-
+    <select class="dashboard-select">
+        <option value="1" selected>KPI Ministère</option>
+        <option value="2">KPI Chef de projet</option>
+    </select>
 </div>
-
-<div class="container container2">
-    <div #etatProjetParCauseAlerteDetail1 class="etat-projet-par-cause-alerte-detail1 diagram">
-        <app-line-chart #etatProjetParCauseAlerteDetailChart1 [diagramName]="'etat-projet-par-cause-alerte-detail1'" (dataselect)="onEChart4DataSelect($event)" (dataunselect)="onEChart4DataUnselect()" [ChartOptions]="ChartOptions4"></app-line-chart>
+<div class="page-container">
+    <div class="ministre-dashboard">
+            <div class="container container1">
+                    <div class="etat-projet-par-statut diagram">
+                        <app-line-chart  [diagramName]="'etat-projet-par-statut'" (dataselect)="onEChart1DataSelect($event)" (dataunselect)="onEChart1DataUnselect()" [ChartOptions]="ChartOptions1"></app-line-chart>
+                    </div>
+                  
+                    <div #etatProjetParStatutDetail class="etat-projet-par-statut-detail diagram" style="width:22%">
+                        <h3 class="title"></h3>
+                        <app-line-chart #etatProjetParStatutDetailChart [diagramName]="'etat-projet-par-statut-detail'" [ChartOptions]="ChartOptions2"></app-line-chart>
+                    </div>
+                  
+                    <div class="etat-projet-par-cause-alerte diagram" style="width:31%">
+                          <app-line-chart  [diagramName]="'etat-projet-par-cause-alerte'" (dataselect)="onEChart3DataSelect($event)" (dataunselect)="onEChart3DataUnselect()" [ChartOptions]="ChartOptions3"></app-line-chart>
+                      </div>
+                      <div class="nbr-beneficiaires-fct-temps diagram" style="width:22%">
+                          <app-line-chart  [diagramName]="'nbr-beneficiaires-fct-temps'" [ChartOptions]="ChartOptions6"></app-line-chart>
+                      </div>
+                  
+                  </div>
+                  
+                  <div class="container container2">
+                      <div #etatProjetParCauseAlerteDetail1 class="etat-projet-par-cause-alerte-detail1 diagram">
+                          <app-line-chart #etatProjetParCauseAlerteDetailChart1 [diagramName]="'etat-projet-par-cause-alerte-detail1'" (dataselect)="onEChart4DataSelect($event)" (dataunselect)="onEChart4DataUnselect()" [ChartOptions]="ChartOptions4"></app-line-chart>
+                      </div>
+                          
+                      <div #etatProjetParCauseAlerteDetail2 class="etat-projet-par-cause-alerte-detail2 diagram">
+                          <h3 class="title">Pourcentages des bénéficiaires par type</h3>
+                          <app-line-chart #etatProjetParCauseAlerteDetailChart2 [diagramName]="'etat-projet-par-cause-alerte-detail2'" [ChartOptions]="ChartOptions5"></app-line-chart>
+                      </div>
+                  </div>
+                  
+                  <div class="container container3">
+                      <div #etatBudgetParCategorie class="etat-budget-par-categorie diagram" style="width:40%;">
+                          <app-line-chart #etatBudgetParCategorieChart [diagramName]="'etat-budget-par-categorie'" (dataselect)="onEChart7DataSelect($event)" (dataunselect)="onEChart7DataUnselect()" [ChartOptions]="ChartOptions7"></app-line-chart>
+                      </div>
+                  
+                      <div #etatBudgetParCategorieDetail1 class="etat-budget-par-categorie-detail1 diagram" style="width:30%;">
+                          <app-line-chart #etatBudgetParCategorieDetailChart1 [diagramName]="'etat-budget-par-categorie-detail1'" (dataselect)="onEChart8DataSelect($event)" (dataunselect)="onEChart8DataUnselect()" [ChartOptions]="ChartOptions8"></app-line-chart>
+                      </div> 
+                  
+                      <div #etatBudgetParCategorieDetail2 class="etat-budget-par-categorie-detail2 diagram"  style="width:30%;">
+                          <app-line-chart #etatBudgetParCategorieDetailChart2 [diagramName]="'etat-budget-par-categorie-detail2'" [ChartOptions]="ChartOptions9"></app-line-chart>
+                      </div> 
+                  
+                  </div>
     </div>
-        
-    <div #etatProjetParCauseAlerteDetail2 class="etat-projet-par-cause-alerte-detail2 diagram">
-        <h3 class="title">Pourcentages des bénéficiaires par type</h3>
-        <app-line-chart #etatProjetParCauseAlerteDetailChart2 [diagramName]="'etat-projet-par-cause-alerte-detail2'" [ChartOptions]="ChartOptions5"></app-line-chart>
+
+    <div class="chefprojet-dashboard">
+
     </div>
-</div>
-
-<div class="container container3">
-    <div #etatBudgetParCategorie class="etat-budget-par-categorie diagram" style="width:40%;">
-        <app-line-chart #etatBudgetParCategorieChart [diagramName]="'etat-budget-par-categorie'" (dataselect)="onEChart7DataSelect($event)" (dataunselect)="onEChart7DataUnselect()" [ChartOptions]="ChartOptions7"></app-line-chart>
-    </div>
-
-    <div #etatBudgetParCategorieDetail1 class="etat-budget-par-categorie-detail1 diagram" style="width:30%;">
-        <app-line-chart #etatBudgetParCategorieDetailChart1 [diagramName]="'etat-budget-par-categorie-detail1'" (dataselect)="onEChart8DataSelect($event)" (dataunselect)="onEChart8DataUnselect()" [ChartOptions]="ChartOptions8"></app-line-chart>
-    </div> 
-
-    <div #etatBudgetParCategorieDetail2 class="etat-budget-par-categorie-detail2 diagram"  style="width:30%;">
-        <app-line-chart #etatBudgetParCategorieDetailChart2 [diagramName]="'etat-budget-par-categorie-detail2'" [ChartOptions]="ChartOptions9"></app-line-chart>
-    </div> 
-
 </div>
