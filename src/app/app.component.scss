@@ -18,7 +18,7 @@
 }
 
 app-line-chart{
-  width:100%;
+  width:calc(100% - 2px);
   /*flex-grow: 1;*/
   border: 1px solid #8080804f;
 }
@@ -40,7 +40,6 @@ app-line-chart{
   margin-bottom:0px;
   border: none;
   border-top: 1px solid #8080804f;
-  width:100%;
 }
 
 .separator:last-of-type{
