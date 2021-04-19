@@ -28,42 +28,27 @@ ChartOptions1: any =  {
       left:"center",
       right:"center"
     },
-    /*grid: {
-      top:50,
-      left: '3%',
-      right: '4%',
-      bottom: 30,
-      containLabel: true
-    },*/
     legend: {
-      /*orient: 'horizontal',
-      center: 'center',
-      bottom: "bottom",*/
       data: ['En attente de versement', 'En cours', 'Clôturé'],
-      /*textStyle: {
-        //color: "#000000",
-      },*/
       selectedMode:false,
-      top:"10%"
+      //top:"10%",
+      bottom:0,
+      left:10,
+      right:10,
+      width:"100%"
     },
     series: [
       {
         //name: 'Countries',
         type: 'pie',
         radius: '70%',
-        center: ['50%', '60%'],
+        center: ['50%', '45%'],
         data: [
           { value: 15, name: 'En attente de versement'},
           { value: 25, name: 'En cours'},
           { value: 60, name: 'Clôturé'},
         ],
-        /*itemStyle: {
-          emphasis: {
-            shadowBlur: 10,
-            shadowOffsetX: 0,
-            shadowColor: "#8c8c8c",
-          },
-        },*/
+
         label: {
           show:false
         },
@@ -116,19 +101,12 @@ ChartOptions2: any = {
         {
           name: 'Avancement des projets',
           type: 'bar',
-          
-          /*showBackground: true,
-          backgroundStyle: {
-            color: 'rgba(180, 180, 180, 0.2)'
-          },*/
-          
+               
           label: {
               show: true,
               formatter: '{c}%',
           },
-          /*emphasis: {
-              focus: 'series'
-          },*/
+
           data: [0]
         },
     ]
@@ -140,19 +118,15 @@ ChartOptions3: any =  {
   tooltip: {
     trigger: 'item',
     formatter: '{b} : {d}%',
-    //formatter: '{a} <br/>{b} : {c} ({d}%)',
-    /*right:"right"*/
   },
   legend: {
-    /*orient: 'horizontal',
-    center: 'center',
-    bottom: "bottom",*/
     data: ['Des projets en retard', 'Des projets ont eu des deviations en terme de budget', 'Des projets non pas encore reçu les virements des tranches'],
-    /*textStyle: {
-      color: "#000000",
-    },*/
     selectedMode:false,
-    top:"7%"
+    //top:"7%",
+    bottom:0,
+    left:10,
+    right:10,
+    width:"100%",
   },
   title:{
     show:true,
@@ -169,19 +143,12 @@ ChartOptions3: any =  {
       //name: 'Countries',
       type: 'pie',
       radius: "60%",
-      center: ['50%', '60%'],
+      center: ['50%', '45%'],
       data: [
         { value: 26, name: 'Des projets en retard'},
         { value: 37, name: 'Des projets ont eu des deviations en terme de budget'},
         { value: 37, name: 'Des projets non pas encore reçu les virements des tranches'},
       ],
-      /*itemStyle: {
-        emphasis: {
-          shadowBlur: 10,
-          shadowOffsetX: 0,
-          shadowColor: "#8c8c8c",
-        },
-      },*/
       label: {
         show:false
       },
@@ -205,23 +172,12 @@ ChartOptions4: any = {
   },
   tooltip: {
       trigger: 'item',
-      /*axisPointer: {            // Use axis to trigger tooltip
-          type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
-      }*/
       formatter: '{b}: {c}%',
   },
   legend: {
       selectedMode:false,
       show:false
   },
-  /*grid: {
-    top:"1%",
-    left: 10,
-    right: 20,
-    bottom: "1%",
-    containLabel: true,
-    show:true
-  },*/
   grid: {
     top:22,
     left: 10,
@@ -236,7 +192,7 @@ ChartOptions4: any = {
         "Université innovante et entrepreneuriale",
         "Services aux étudiants",
         "Gouvernance et Capacité de Gestion",
-        "Assurance qualité & accréditation"
+        "Assurance qualité\n& accréditation"
       ],
       axisLabel: {
         overflow: "break",
@@ -372,11 +328,165 @@ ChartOptions6: any = {
   }]
 };
 
+ChartOptions7: any = {
+  /*color:["#5470c6"],*/
+  tooltip: {
+      trigger: 'item',
+      formatter: '{c} Millions DT',
+  },
+  title:{
+    show:true,
+    text:"Etat du budget par catégorie",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
+  legend: {
+      selectedMode:false,
+      show:false
+  },
+  grid: {
+      top:25,
+      left: 10,
+      right: 30,
+      bottom: 15,
+      containLabel: true
+  },
+  xAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} M.DT'
+      },
+  },
+  yAxis: {
+      type: 'category',
+      data: [
+        "Appui à une meilleure\nconnexion au\nmarché de l'emploi",
+        "Université innovante\n et entrepreneuriale",
+        "Services aux étudiants",
+        "Gouvernance et Capacité\n de Gestion",
+        "Assurance qualité\n& accréditation"
+      ],
+  },
+  series: [
+      {
+        name: 'Avancement des projets',
+        type: 'bar',
+        
+        label: {
+            show: false,
+            formatter: '{c} M.DT',
+        },
+        data: [125, 100, 50, 75, 30],
+      },
+  ]
+};
+
+ChartOptions8: any =  {
+        
+  //color: ["#70ad47", "#ed7d32", "#a5a5a5"],
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b} : {d}%',
+    //formatter: '{a} <br/>{b} : {c} ({d}%)',
+  },
+  title:{
+    show:true,
+    text:"Budget par sous catégorie",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
+  legend: {
+    data: [''],
+    selectedMode:false,
+    //top:"10%",
+    bottom:0,
+    left:10,
+    right:10,
+    width:"100%"
+  },
+  series: [
+    {
+      //name: 'Countries',
+      type: 'pie',
+      radius: '65%',
+      center: ['50%', '45%'],
+      data: [
+        { value: 0, name: ''},
+      ],
+      label: {
+        show:false
+      },
+      labelLine: {
+        show:false
+      }
+    },
+  ],
+};
+
+ChartOptions9: any =  {
+        
+  //color: ["#70ad47", "#ed7d32", "#a5a5a5"],
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b} : {d}%',
+    //formatter: '{a} <br/>{b} : {c} ({d}%)',
+  },
+  title:{
+    show:true,
+    text:"Budget par projet",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
+  legend: {
+    data: [''],
+    selectedMode:false,
+    //top:"10%",
+    bottom:0,
+    left:10,
+    right:10,
+    width:"100%"
+  },
+  series: [
+    {
+      //name: 'Countries',
+      type: 'pie',
+      radius: '65%',
+      center: ['50%', '45%'],
+      data: [
+        { value: 0, name: ''},
+      ],
+      label: {
+        show:false
+      },
+      labelLine: {
+        show:false
+      }
+    },
+  ],
+};
+
+
 selectedDataIndex1:number = undefined;
 
 selectedDataIndex3:number = undefined;
 
 selectedDataIndex4:number = undefined;
+
+selectedDataIndex7:number = undefined;
+
+selectedDataIndex8:number = undefined;
 
 echart2Title: string = "";
 
@@ -388,6 +498,16 @@ echart2Title: string = "";
 
 @ViewChild("etatProjetParCauseAlerteDetail2") etatProjetParCauseAlerteDetail2: ElementRef;
 @ViewChild("etatProjetParCauseAlerteDetailChart2")etatProjetParCauseAlerteDetailChart2: LineChartComponent;
+
+@ViewChild("etatBudgetParCategorie") etatBudgetParCategorie: ElementRef;
+@ViewChild("etatBudgetParCategorieChart") etatBudgetParCategorieChart: LineChartComponent;
+
+@ViewChild("etatBudgetParCategorieDetail1") etatBudgetParCategorieDetail1: ElementRef;
+@ViewChild("etatBudgetParCategorieDetailChart1") etatBudgetParCategorieDetailChart1: LineChartComponent;
+
+
+@ViewChild("etatBudgetParCategorieDetail2") etatBudgetParCategorieDetail2: ElementRef;
+@ViewChild("etatBudgetParCategorieDetailChart2") etatBudgetParCategorieDetailChart2: LineChartComponent;
 
 constructor(private mockServerService: MockServerService) {}
 
@@ -575,6 +695,116 @@ onEChart4DataUnselect(){
   this.etatProjetParCauseAlerteDetailChart2.chartInstance.setOption(this.ChartOptions5);
 
   this.etatProjetParCauseAlerteDetailChart2.chartInstance.dispatchAction({type: "unselect"});
+}
+
+onEChart7DataSelect(data){
+
+  this.selectedDataIndex8 = undefined;
+  this.ChartOptions9.series[0].data = [{ value: 0, name: ''}];
+  this.etatBudgetParCategorieDetailChart2.chartInstance.setOption(this.ChartOptions9);
+  this.etatBudgetParCategorieDetailChart2.chartInstance.dispatchAction({type: "unselect"});
+  
+  ////////
+
+  console.log("onEChart7DataSelect data = ", data);
+  this.selectedDataIndex7 = data;
+
+    let echart7DataName = this.ChartOptions7.yAxis.data[this.selectedDataIndex7];
+    //this.echart2Title = "Projets en statut '"+echart1DataName+"'";
+
+
+  
+    let newEchart8Data = (this.mockServerService.db[3].data as Array<any>).filter((el)=>{
+      return echart7DataName == el.dependencyDiagramDataName;
+    });
+
+    let projectNames = newEchart8Data.map((el)=>{return el.name});
+    let dataValues = newEchart8Data.map((el)=>{return el.data});
+
+    console.log("projectNames = ", projectNames);
+
+    console.log("dataValues = ", dataValues);
+
+    this.ChartOptions8.legend.data = projectNames;
+
+    this.ChartOptions8.series[0].data = projectNames.map((name, index)=>{
+      return {value :dataValues[index], name: name}
+    });
+
+    //this.etatBudgetParCategorieDetailChart1.chartInstance.getDom().scrollIntoView(false);
+
+    this.etatBudgetParCategorieDetailChart1.chartInstance.setOption(this.ChartOptions8);
+
+
+    console.log("echart7DataName = ", echart7DataName);
+    console.log("newEchart8Data = ", newEchart8Data);
+  
+
+}
+
+onEChart7DataUnselect(){
+  this.selectedDataIndex7 = undefined;
+  
+  this.ChartOptions8.series[0].data = [{ value: 0, name: ''}];
+
+  this.etatBudgetParCategorieDetailChart1.chartInstance.setOption(this.ChartOptions8);
+  this.etatBudgetParCategorieDetailChart1.chartInstance.dispatchAction({type: "unselect"});
+
+  ///////
+
+  this.selectedDataIndex8 = undefined;
+  
+  this.ChartOptions9.series[0].data = [{ value: 0, name: ''}];
+
+  this.etatBudgetParCategorieDetailChart2.chartInstance.setOption(this.ChartOptions9);
+  this.etatBudgetParCategorieDetailChart2.chartInstance.dispatchAction({type: "unselect"});
+}
+
+onEChart8DataSelect(data){
+
+  console.log("onEChart7DataSelect data = ", data);
+  this.selectedDataIndex8 = data;
+
+  let echart8Data = this.ChartOptions8.series[0].data[this.selectedDataIndex8];
+    //this.echart2Title = "Projets en statut '"+echart1DataName+"'";
+
+
+  
+    let newEchart9Data = (this.mockServerService.db[4].data as Array<any>).filter((el)=>{
+      return echart8Data.name == el.dependencyDiagramDataName;
+    });
+
+    if(newEchart9Data.length){
+      let projectNames = newEchart9Data.map((el)=>{return el.name});
+      let dataValues = newEchart9Data.map((el)=>{return el.data});
+
+      console.log("projectNames = ", projectNames);
+
+      console.log("dataValues = ", dataValues);
+
+      this.ChartOptions9.legend.data = projectNames;
+
+      this.ChartOptions9.series[0].data = projectNames.map((name, index)=>{
+        return {value :dataValues[index], name: name}
+      });
+
+      //this.etatBudgetParCategorieDetailChart1.chartInstance.getDom().scrollIntoView(false);
+
+      this.etatBudgetParCategorieDetailChart2.chartInstance.setOption(this.ChartOptions9);
+    }
+
+    console.log("echart8DataName = ", echart8Data.name);
+    console.log("newEchart9Data = ", newEchart9Data);
+
+}
+
+onEChart8DataUnselect(){
+  this.selectedDataIndex8 = undefined;
+  
+  this.ChartOptions9.series[0].data = [{ value: 0, name: ''}];
+
+  this.etatBudgetParCategorieDetailChart2.chartInstance.setOption(this.ChartOptions9);
+  this.etatBudgetParCategorieDetailChart2.chartInstance.dispatchAction({type: "unselect"});
 }
 
 }

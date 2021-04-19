@@ -136,7 +136,7 @@ export class MockServerService {
           dependencyDiagramDataName: "Des projets en retard",
         },
         {
-          name: "Assurance qualité & accréditation",
+          name: "Assurance qualité\n& accréditation",
           data: 50,
           dependencyDiagramName: "etat-projet-par-cause-alerte",
           dependencyDiagramDataName: "Des projets en retard",
@@ -167,7 +167,7 @@ export class MockServerService {
           dependencyDiagramDataName: "Des projets ont eu des deviations en terme de budget",
         },
         {
-          name: "Assurance qualité & accréditation",
+          name: "Assurance qualité\n& accréditation",
           data: 80,
           dependencyDiagramName: "etat-projet-par-cause-alerte",
           dependencyDiagramDataName: "Des projets ont eu des deviations en terme de budget",
@@ -198,7 +198,7 @@ export class MockServerService {
           dependencyDiagramDataName: "Des projets non pas encore reçu les virements des tranches",
         },
         {
-          name: "Assurance qualité & accréditation",
+          name: "Assurance qualité\n& accréditation",
           data: 65,
           dependencyDiagramName: "etat-projet-par-cause-alerte",
           dependencyDiagramDataName: "Des projets non pas encore reçu les virements des tranches",
@@ -264,15 +264,275 @@ export class MockServerService {
           name: "Etudiant",
           data: 25,
           dependencyDiagramName: "etat-projet-par-statut-detail1",
-          dependencyDiagramDataName: "Assurance qualité & accréditation",
+          dependencyDiagramDataName: "Assurance qualité\n& accréditation",
         },
         {
           name: "Enseignant",
           data: 75,
           dependencyDiagramName: "etat-projet-par-statut-detail1",
-          dependencyDiagramDataName: "Assurance qualité & accréditation",
+          dependencyDiagramDataName: "Assurance qualité\n& accréditation",
         }
         /***************/
+      ]
+    },
+    {
+      diagramName: "etat-projet-par-statut-detail1",
+      data:[
+        {
+          name: "PAQ Co-Construction et Innovations pédagogiques",
+          data: 40,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Assurance qualité\n& accréditation",
+        },
+        {
+          name: "PAQ CG Appui au Pilotage et aux mécanismes/structures d'insertion",
+          data: 40,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Assurance qualité\n& accréditation",
+        },
+        {
+          name: "Certification des compétences pour l'employabilité PRICE",
+          data: 20,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Assurance qualité\n& accréditation",
+        },
+        /**************/
+        {
+          name: "Catégorie2-Sous Catégorie1",
+          data: 34,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Gouvernance et Capacité\n de Gestion",
+        },
+        {
+          name: "Catégorie2-Sous Catégorie2",
+          data: 33,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Gouvernance et Capacité\n de Gestion",
+        },
+        {
+          name: "Catégorie2-Sous Catégorie3",
+          data: 33,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Gouvernance et Capacité\n de Gestion",
+        },
+        /**************/
+        {
+          name: "Catégorie3-Sous Catégorie1",
+          data: 35,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Services aux étudiants",
+        },
+        {
+          name: "Catégorie3-Sous Catégorie2",
+          data: 65,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Services aux étudiants",
+        },
+        /**************/
+        {
+          name: "Catégorie4-Sous Catégorie1",
+          data: 40,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Université innovante\n et entrepreneuriale",
+        },
+        {
+          name: "Catégorie4-Sous Catégorie2",
+          data: 60,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Université innovante\n et entrepreneuriale",
+        },
+        /**************/
+        {
+          name: "Catégorie5-Sous Catégorie1",
+          data: 22,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Appui à une meilleure\nconnexion au\nmarché de l'emploi",
+        },
+        {
+          name: "Catégorie5-Sous Catégorie2",
+          data: 44,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Appui à une meilleure\nconnexion au\nmarché de l'emploi",
+        },
+        {
+          name: "Catégorie5-Sous Catégorie3",
+          data: 54,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Appui à une meilleure\nconnexion au\nmarché de l'emploi",
+        }
+      ]
+    },
+    {
+      diagramName: "etat-projet-par-statut-detail2",
+      data:[
+        {
+          name: "C1-SC1-Projet1",
+          data: 50,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "PAQ Co-Construction et Innovations pédagogiques",
+        },
+        {
+          name: "C1-SC1-Projet2",
+          data: 50,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "PAQ Co-Construction et Innovations pédagogiques",
+        },
+        /***********/
+        {
+          name: "C1-SC2-Projet1",
+          data: 30,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "PAQ CG Appui au Pilotage et aux mécanismes/structures d'insertion",
+        },
+        {
+          name: "C1-SC2-Projet2",
+          data: 70,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "PAQ CG Appui au Pilotage et aux mécanismes/structures d'insertion",
+        },
+        /***********/
+        {
+          name: "C1-SC3-Projet1",
+          data: 25,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Certification des compétences pour l'employabilité PRICE",
+        },
+        {
+          name: "C1-SC3-Projet2",
+          data: 75,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Certification des compétences pour l'employabilité PRICE",
+        },
+        /***********/
+        {
+          name: "C2-SC1-Projet1",
+          data: 35,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie2-Sous Catégorie1",
+        },
+        {
+          name: "C2-SC1-Projet2",
+          data: 65,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie2-Sous Catégorie1",
+        },
+        /***********/
+        {
+          name: "C2-SC2-Projet1",
+          data: 40,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie2-Sous Catégorie2",
+        },
+        {
+          name: "C2-SC2-Projet2",
+          data: 60,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie2-Sous Catégorie2",
+        },
+        /***********/
+        {
+          name: "C2-SC3-Projet1",
+          data: 15,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie2-Sous Catégorie3",
+        },
+        {
+          name: "C2-SC3-Projet2",
+          data: 85,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie2-Sous Catégorie3",
+        },
+        /***********/
+        {
+          name: "C3-SC1-Projet1",
+          data: 23,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie3-Sous Catégorie1",
+        },
+        {
+          name: "C3-SC1-Projet2",
+          data: 77,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie3-Sous Catégorie1",
+        },
+        /***********/
+        {
+          name: "C3-SC2-Projet1",
+          data: 38,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie3-Sous Catégorie2",
+        },
+        {
+          name: "C3-SC2-Projet2",
+          data: 62,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie3-Sous Catégorie2",
+        },
+        /***********/
+        {
+          name: "C4-SC1-Projet1",
+          data: 43,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie4-Sous Catégorie1",
+        },
+        {
+          name: "C4-SC1-Projet2",
+          data: 57,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie4-Sous Catégorie1",
+        },
+        /***********/
+        {
+          name: "C4-SC2-Projet1",
+          data: 53,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie4-Sous Catégorie2",
+        },
+        {
+          name: "C4-SC2-Projet2",
+          data: 47,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie4-Sous Catégorie2",
+        },
+        /***********/
+        {
+          name: "C5-SC1-Projet1",
+          data: 30,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie5-Sous Catégorie1",
+        },
+        {
+          name: "C5-SC1-Projet2",
+          data: 70,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie5-Sous Catégorie1",
+        },
+        /***********/
+        {
+          name: "C5-SC2-Projet1",
+          data: 24,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie5-Sous Catégorie2",
+        },
+        {
+          name: "C5-SC2-Projet2",
+          data: 76,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie5-Sous Catégorie2",
+        },
+        /***********/
+        {
+          name: "C5-SC3-Projet1",
+          data: 28,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie5-Sous Catégorie3",
+        },
+        {
+          name: "C5-SC3-Projet2",
+          data: 72,
+          dependencyDiagramName: "etat-budget-par-categorie-detail1",
+          dependencyDiagramDataName: "Catégorie5-Sous Catégorie3",
+        },
       ]
     }
   ]
