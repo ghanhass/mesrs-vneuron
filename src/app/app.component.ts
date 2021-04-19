@@ -405,7 +405,12 @@ onEChart3DataSelect(data){
     this.ChartOptions4.xAxis.data = projectNames;
     this.ChartOptions4.series[0].data = dataValues;
 
+    //unselect etat-projet-par-cause-alerte-detail1
+    this.etatProjetParCauseAlerteDetailChart1.chartInstance.dispatchAction({type: "unselect"});
+
     this.etatProjetParCauseAlerteDetailChart1.chartInstance.setOption(this.ChartOptions4);
+
+    //rehide etat-projet-par-cause-alerte-detail2 
 
 
     console.log("echart3DataName = ", echart3DataName);
@@ -477,6 +482,8 @@ onEChart4DataUnselect(){
   if(etatProjetParCauseAlerteDetail2_El){
     etatProjetParCauseAlerteDetail2_El.classList.add("hidden-diagram");
   }
+
+  this.etatProjetParCauseAlerteDetailChart2.chartInstance.dispatchAction({type: "unselect"});
 }
 
 }
