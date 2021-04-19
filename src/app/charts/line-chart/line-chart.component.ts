@@ -80,17 +80,24 @@ export class LineChartComponent implements AfterViewInit{
       this.chartInstance.on('selectchanged', function (params: any) {
         console.log("chart selectchanged = ",params);
         let selectedDataIndex = params.fromActionPayload.dataIndexInside;
+        let selectType = params.fromAction;
 
         self.chartInstance.dispatchAction({type:"downplay"});
-        if(self.selectedDataIndex !== selectedDataIndex){
-          self.chartInstance.dispatchAction({
-            type:"highlight",
-            dataIndex: selectedDataIndex
-          });
-          self.selectedDataIndex = selectedDataIndex;
-          self.dataselect.emit(selectedDataIndex);
+        if(selectType == "select"){
+          if(self.selectedDataIndex !== selectedDataIndex){
+            self.chartInstance.dispatchAction({
+              type:"highlight",
+              dataIndex: selectedDataIndex
+            });
+            self.selectedDataIndex = selectedDataIndex;
+            self.dataselect.emit(selectedDataIndex);
+          }
+          else{
+            self.selectedDataIndex = undefined;
+            self.dataunselect.emit();
+          }
         }
-        else{
+        else if(selectType == "unselect"){
           self.selectedDataIndex = undefined;
           self.dataunselect.emit();
         }

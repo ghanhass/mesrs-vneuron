@@ -204,8 +204,8 @@ ChartOptions4: any = {
       ],
       axisLabel: {
         overflow: "break",
-        height: 300,
-        width:90,
+        //height: 300,
+        width:70,
         interval:0,
         align:"center",
         //verticalAlign:"bottom",
@@ -231,7 +231,69 @@ ChartOptions4: any = {
         emphasis: {
             focus: 'series'
         },
-        data: [60, 20, 10, 50, 50]
+        data: [0, 0, 0, 0, 0]
+      },
+  ]
+};
+
+ChartOptions5: any = {
+  color:["#5470c6"],
+  tooltip: {
+      trigger: 'item',
+      /*axisPointer: {            // Use axis to trigger tooltip
+          type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
+      }*/
+      formatter: '{b}: {c}%',
+  },
+  legend: {
+      selectedMode:false,
+      show:false
+  },
+  grid: {
+      /*left: '3%',
+      right: '4%',
+      bottom: '3%',*/
+      left:"3%",
+      right:"3%",
+      top:"7%",
+      containLabel: true
+  },
+  xAxis: {
+      type: 'category',
+      data: [
+        "Enseignant",
+        "Etudiant"
+      ],
+      axisLabel: {
+        overflow: "break",
+        //height: 300,
+        width:70,
+        interval:0,
+        align:"center",
+        //verticalAlign:"bottom",
+        //rotate:-75
+      },
+  },
+  yAxis: {
+      type: 'value',
+      max: 100,
+      axisLabel: {
+        formatter: '{value} %'
+      },
+  },
+  series: [
+      {
+        name: 'Avancement des projets',
+        type: 'bar',
+        
+        label: {
+            show: true,
+            formatter: '{c}%',
+        },
+        emphasis: {
+            focus: 'series'
+        },
+        data: [60, 40]
       },
   ]
 };
@@ -240,6 +302,8 @@ selectedDataIndex1:number = undefined;
 
 selectedDataIndex3:number = undefined;
 
+selectedDataIndex4:number = undefined;
+
 echart2Title: string = "";
 
 @ViewChild("etatProjetParStatutDetail") etatProjetParStatutDetail: ElementRef;
@@ -247,6 +311,9 @@ echart2Title: string = "";
 
 @ViewChild("etatProjetParCauseAlerteDetail1") etatProjetParCauseAlerteDetail1: ElementRef;
 @ViewChild("etatProjetParCauseAlerteDetailChart1")etatProjetParCauseAlerteDetailChart1: LineChartComponent;
+
+@ViewChild("etatProjetParCauseAlerteDetail2") etatProjetParCauseAlerteDetail2: ElementRef;
+@ViewChild("etatProjetParCauseAlerteDetailChart2")etatProjetParCauseAlerteDetailChart2: LineChartComponent;
 
 constructor(private mockServerService: MockServerService) {}
 
@@ -321,7 +388,7 @@ onEChart3DataSelect(data){
         fontSize:13
       }
     };
-    etatProjetParCauseAlerteDetail1_EL.querySelector(".title").textContent = "Pourcentages des bénéficiaires par catégorie";
+
   
     let newEchart4Data = (this.mockServerService.db[1].data as Array<any>).filter((el)=>{
       return echart3DataName == el.dependencyDiagramDataName;
@@ -352,6 +419,63 @@ onEChart3DataUnselect(){
   let etatProjetParCauseAlerteDetail1_El: HTMLElement = this.etatProjetParCauseAlerteDetail1.nativeElement;
   if(etatProjetParCauseAlerteDetail1_El){
     etatProjetParCauseAlerteDetail1_El.classList.add("hidden-diagram");
+  }
+  /******/
+  this.etatProjetParCauseAlerteDetailChart1.chartInstance.dispatchAction({type: "unselect"});
+  this.etatProjetParCauseAlerteDetailChart2.chartInstance.dispatchAction({type: "unselect"});
+}
+
+onEChart4DataSelect(data){
+  console.log("onEChart4DataSelect data = ", data);
+  this.selectedDataIndex4 = data;
+  let etatProjetParCauseAlerteDetail2_EL: HTMLElement = this.etatProjetParCauseAlerteDetail2.nativeElement;
+  if(etatProjetParCauseAlerteDetail2_EL){
+    etatProjetParCauseAlerteDetail2_EL.classList.remove("hidden-diagram");
+
+    //let echart4Data = this.ChartOptions4.series[0].data[this.selectedDataIndex4];
+
+    let echart4DataName = this.ChartOptions4.xAxis.data[this.selectedDataIndex4];
+    //this.echart2Title = "Projets en statut '"+echart1DataName+"'";
+
+    let title = {
+      subtext: echart4DataName,
+      //subtext: echart3DataName,
+      left: 'center',
+      /*subtextStyle: {
+        fontSize:13
+      }*/
+    };
+
+  
+    let newEchart5Data = (this.mockServerService.db[2].data as Array<any>).filter((el)=>{
+      return echart4DataName == el.dependencyDiagramDataName;
+    });
+
+    let projectNames = newEchart5Data.map((el)=>{return el.name});
+    let dataValues = newEchart5Data.map((el)=>{return el.data});
+
+    console.log("projectNames = ", projectNames);
+
+    console.log("dataValues = ", dataValues);
+
+    this.ChartOptions5.title = title;
+    this.ChartOptions5.xAxis.data = projectNames;
+    this.ChartOptions5.series[0].data = dataValues;
+
+    this.etatProjetParCauseAlerteDetailChart2.chartInstance.setOption(this.ChartOptions5);
+
+
+    console.log("echart4DataName = ", echart4DataName);
+    console.log("newEchart5Data = ", newEchart5Data);
+  }
+}
+
+onEChart4DataUnselect(){
+  this.selectedDataIndex4 = undefined;
+
+  let etatProjetParCauseAlerteDetail2_El: HTMLElement = this.etatProjetParCauseAlerteDetail2.nativeElement;
+  if(etatProjetParCauseAlerteDetail2_El){
+    etatProjetParCauseAlerteDetail2_El.classList.add("hidden-diagram");
   }
 }
 

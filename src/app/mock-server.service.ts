@@ -109,7 +109,7 @@ export class MockServerService {
       ]
     },
     {
-      diagramName: "etat-projet-par-cause-alerte-detail",
+      diagramName: "etat-projet-par-cause-alerte-detail1",
       data:[
         {
           name: "Appui à une meilleure connexion au marché de l'emploi",
@@ -203,6 +203,76 @@ export class MockServerService {
           dependencyDiagramName: "etat-projet-par-cause-alerte",
           dependencyDiagramDataName: "Des projets non pas encore reçu les virements des tranches",
         }
+      ]
+    },
+    {
+      diagramName: "etat-projet-par-statut-detail2",
+      data:[
+        {
+          name: "Etudiant",
+          data: 40,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Appui à une meilleure connexion au marché de l'emploi",
+        },
+        {
+          name: "Enseignant",
+          data: 60,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Appui à une meilleure connexion au marché de l'emploi",
+        },
+        /***************/
+        {
+          name: "Etudiant",
+          data: 50,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Université innovante et entrepreneuriale",
+        },
+        {
+          name: "Enseignant",
+          data: 50,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Université innovante et entrepreneuriale",
+        },
+        /***************/
+        {
+          name: "Etudiant",
+          data: 30,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Services aux étudiants",
+        },
+        {
+          name: "Enseignant",
+          data: 70,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Services aux étudiants",
+        },
+        /***************/
+        {
+          name: "Etudiant",
+          data: 80,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Gouvernance et Capacité de Gestion",
+        },
+        {
+          name: "Enseignant",
+          data: 20,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Gouvernance et Capacité de Gestion",
+        },
+        /***************/
+        {
+          name: "Etudiant",
+          data: 25,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Assurance qualité & accréditation",
+        },
+        {
+          name: "Enseignant",
+          data: 75,
+          dependencyDiagramName: "etat-projet-par-statut-detail1",
+          dependencyDiagramDataName: "Assurance qualité & accréditation",
+        }
+        /***************/
       ]
     }
   ]
