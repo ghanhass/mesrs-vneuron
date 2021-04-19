@@ -12,77 +12,93 @@ export class AppComponent implements OnInit{
 
 ChartOptions1: any =  {
         
-    color: ["#70ad47", "#ed7d32", "#a5a5a5"],
+    //color: ["#70ad47", "#ed7d32", "#a5a5a5"],
     tooltip: {
       trigger: 'item',
       formatter: '{b} : {d}%',
       //formatter: '{a} <br/>{b} : {c} ({d}%)',
     },
-    legend: {
-      orient: 'horizontal',
-      center: 'center',
-      bottom: "bottom",
-      data: ['En attente de versement', 'En cours', 'Clôturé'],
-      textStyle: {
-        color: "#000000",
+    title:{
+      show:true,
+      text:"Etat d'avancement des projets par statut",
+      textStyle:{
+        fontSize:14,
+        overflow:"break"
       },
-      selectedMode:false
+      left:"center",
+      right:"center"
+    },
+    /*grid: {
+      top:50,
+      left: '3%',
+      right: '4%',
+      bottom: 30,
+      containLabel: true
+    },*/
+    legend: {
+      /*orient: 'horizontal',
+      center: 'center',
+      bottom: "bottom",*/
+      data: ['En attente de versement', 'En cours', 'Clôturé'],
+      /*textStyle: {
+        //color: "#000000",
+      },*/
+      selectedMode:false,
+      top:"10%"
     },
     series: [
       {
         //name: 'Countries',
         type: 'pie',
-        radius: '90%',
-        center: ['50%', '50%'],
+        radius: '70%',
+        center: ['50%', '60%'],
         data: [
           { value: 15, name: 'En attente de versement'},
           { value: 25, name: 'En cours'},
           { value: 60, name: 'Clôturé'},
         ],
-        itemStyle: {
+        /*itemStyle: {
           emphasis: {
             shadowBlur: 10,
             shadowOffsetX: 0,
             shadowColor: "#8c8c8c",
           },
-        },
+        },*/
         label: {
-          normal: {
-            textStyle: {
-              color: "#000000",
-            },
-          },
           show:false
         },
         labelLine: {
-          normal: {
-            lineStyle: {
-              color: "#8c8c8c",
-            },
-          },
           show:false
-        },
+        }
       },
     ],
 };
 
 ChartOptions2: any = {
-    color:["#5470c6"],
+    /*color:["#5470c6"],*/
     tooltip: {
         trigger: 'item',
-        /*axisPointer: {            // Use axis to trigger tooltip
-            type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
-        }*/
         formatter: '{b}: {c}%',
+    },
+    title:{
+      show:true,
+      text:"",
+      textStyle:{
+        fontSize:14,
+        overflow:"break"
+      },
+      left:"center",
+      right:"center"
     },
     legend: {
         selectedMode:false,
         show:false
     },
     grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
+        top:25,
+        left: 10,
+        right: 20,
+        bottom: 15,
         containLabel: true
     },
     xAxis: {
@@ -94,25 +110,25 @@ ChartOptions2: any = {
     },
     yAxis: {
         type: 'category',
-        data: [''],
+        data: ['']
     },
     series: [
         {
           name: 'Avancement des projets',
           type: 'bar',
           
-          showBackground: true,
+          /*showBackground: true,
           backgroundStyle: {
             color: 'rgba(180, 180, 180, 0.2)'
-          },
+          },*/
           
           label: {
               show: true,
               formatter: '{c}%',
           },
-          emphasis: {
+          /*emphasis: {
               focus: 'series'
-          },
+          },*/
           data: [0]
         },
     ]
@@ -120,61 +136,73 @@ ChartOptions2: any = {
 
 ChartOptions3: any =  {
         
-  color: ["#ff0000", "#ffc000", "#538135"],
+  //color: ["#ff0000", "#ffc000", "#538135"],
   tooltip: {
     trigger: 'item',
     formatter: '{b} : {d}%',
     //formatter: '{a} <br/>{b} : {c} ({d}%)',
-    right:"right"
+    /*right:"right"*/
   },
   legend: {
-    orient: 'horizontal',
+    /*orient: 'horizontal',
     center: 'center',
-    bottom: "bottom",
+    bottom: "bottom",*/
     data: ['Des projets en retard', 'Des projets ont eu des deviations en terme de budget', 'Des projets non pas encore reçu les virements des tranches'],
-    textStyle: {
+    /*textStyle: {
       color: "#000000",
+    },*/
+    selectedMode:false,
+    top:"7%"
+  },
+  title:{
+    show:true,
+    text:"Etat des projets par cause d'alerte",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
     },
-    selectedMode:false
+    left:"center",
+    right:"center"
   },
   series: [
     {
       //name: 'Countries',
       type: 'pie',
-      radius: '50%',
-      center: ['50%', '50%'],
+      radius: "60%",
+      center: ['50%', '60%'],
       data: [
         { value: 26, name: 'Des projets en retard'},
         { value: 37, name: 'Des projets ont eu des deviations en terme de budget'},
         { value: 37, name: 'Des projets non pas encore reçu les virements des tranches'},
       ],
-      itemStyle: {
+      /*itemStyle: {
         emphasis: {
           shadowBlur: 10,
           shadowOffsetX: 0,
           shadowColor: "#8c8c8c",
         },
-      },
+      },*/
       label: {
-        normal: {
-          textStyle: {
-            color: "#000000",
-          },
-        },
+        show:false
       },
       labelLine: {
-        normal: {
-          lineStyle: {
-            color: "#8c8c8c",
-          },
-        },
-      },
+        show:false
+      }
     },
   ],
 };
 
 ChartOptions4: any = {
-  color:["#5470c6"],
+  title:{
+    show:true,
+    text:"% des bénéficiaires par catégories",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
   tooltip: {
       trigger: 'item',
       /*axisPointer: {            // Use axis to trigger tooltip
@@ -186,14 +214,20 @@ ChartOptions4: any = {
       selectedMode:false,
       show:false
   },
+  /*grid: {
+    top:"1%",
+    left: 10,
+    right: 20,
+    bottom: "1%",
+    containLabel: true,
+    show:true
+  },*/
   grid: {
-      /*left: '3%',
-      right: '4%',
-      bottom: '3%',*/
-      left:"3%",
-      right:"3%",
-      top:"7%",
-      containLabel: true
+    top:5,
+    left: 10,
+    right: 10,
+    bottom: 60,
+    containLabel: true
   },
   xAxis: {
       type: 'category',
@@ -239,7 +273,7 @@ ChartOptions4: any = {
 };
 
 ChartOptions5: any = {
-  color:["#5470c6"],
+  //color:["#5470c6"],
   tooltip: {
       trigger: 'item',
       /*axisPointer: {            // Use axis to trigger tooltip
@@ -252,13 +286,11 @@ ChartOptions5: any = {
       show:false
   },
   grid: {
-      /*left: '3%',
-      right: '4%',
-      bottom: '3%',*/
-      left:"3%",
-      right:"3%",
-      top:"7%",
-      containLabel: true
+    top:5,
+    left: 10,
+    right: 10,
+    bottom: 60,
+    containLabel: true
   },
   xAxis: {
       type: 'category',
@@ -295,12 +327,22 @@ ChartOptions5: any = {
         emphasis: {
             focus: 'series'
         },
-        data: [60, 40]
+        data: [0, 0]
       },
   ]
 };
 
 ChartOptions6: any = {
+  title:{
+    show:true,
+    text:"Nbr de bénéficiaires en fct du temps",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
   tooltip: {
     trigger: 'axis',
     formatter: '{b}: {c}%',
@@ -349,12 +391,15 @@ onEChart1DataSelect(data){
   this.selectedDataIndex1 = data;
   let etatProjetParStatutDetailEl: HTMLElement = this.etatProjetParStatutDetail.nativeElement;
   if(etatProjetParStatutDetailEl){
-    etatProjetParStatutDetailEl.classList.remove("hidden-diagram");
+    //etatProjetParStatutDetailEl.classList.remove("hidden-diagram");
 
     let echart1Data = this.ChartOptions1.series[0].data[this.selectedDataIndex1];
 
     let echart1DataName = echart1Data.name;
-    this.echart2Title = "Projets en statut '"+echart1DataName+"'";
+
+    this.ChartOptions2.title.text = "Projets en statut '"+echart1DataName+"'"
+    
+    //this.echart2Title = "Projets en statut '"+echart1DataName+"'";
 
     etatProjetParStatutDetailEl.querySelector(".title").textContent = this.echart2Title;
   
@@ -388,7 +433,12 @@ onEChart1DataUnselect(){
 
   let etatProjetParStatutDetailEl: HTMLElement = this.etatProjetParStatutDetail.nativeElement;
   if(etatProjetParStatutDetailEl){
-    etatProjetParStatutDetailEl.classList.add("hidden-diagram");
+    this.ChartOptions2.yAxis.data = [''];
+    this.ChartOptions2.series[0].data = [0];
+    this.ChartOptions2.title.text = "";
+
+    this.etatProjetParStatutDetailChart.chartInstance.setOption(this.ChartOptions2);
+    ///etatProjetParStatutDetailEl.classList.add("hidden-diagram");
   }
 }
 
@@ -461,7 +511,7 @@ onEChart4DataSelect(data){
   this.selectedDataIndex4 = data;
   let etatProjetParCauseAlerteDetail2_EL: HTMLElement = this.etatProjetParCauseAlerteDetail2.nativeElement;
   if(etatProjetParCauseAlerteDetail2_EL){
-    etatProjetParCauseAlerteDetail2_EL.classList.remove("hidden-diagram");
+    /*etatProjetParCauseAlerteDetail2_EL.classList.remove("hidden-diagram");*/
 
     //let echart4Data = this.ChartOptions4.series[0].data[this.selectedDataIndex4];
 
@@ -508,8 +558,11 @@ onEChart4DataUnselect(){
 
   let etatProjetParCauseAlerteDetail2_El: HTMLElement = this.etatProjetParCauseAlerteDetail2.nativeElement;
   if(etatProjetParCauseAlerteDetail2_El){
-    etatProjetParCauseAlerteDetail2_El.classList.add("hidden-diagram");
+    /*etatProjetParCauseAlerteDetail2_El.classList.add("hidden-diagram");*/
   }
+  
+  this.ChartOptions5.series[0].data = [0, 0];
+  this.etatProjetParCauseAlerteDetailChart2.chartInstance.setOption(this.ChartOptions5);
 
   this.etatProjetParCauseAlerteDetailChart2.chartInstance.dispatchAction({type: "unselect"});
 }

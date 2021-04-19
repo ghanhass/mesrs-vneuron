@@ -1,35 +1,36 @@
-<div class="container">
+<div class="container container1">
   <div class="etat-projet-par-statut diagram">
-      <h3 class="title">Etat d'avancement des projets par statut</h3>
+      <!--<h3 class="title">Etat d'avancement des projets par statut</h3>-->
       <app-line-chart  [diagramName]="'etat-projet-par-statut'" (dataselect)="onEChart1DataSelect($event)" (dataunselect)="onEChart1DataUnselect()" [ChartOptions]="ChartOptions1"></app-line-chart>
   </div>
 
-  <div #etatProjetParStatutDetail class="etat-projet-par-statut-detail diagram hidden-diagram">
+  <div #etatProjetParStatutDetail class="etat-projet-par-statut-detail diagram" style="width:22%">
       <h3 class="title"></h3>
       <app-line-chart #etatProjetParStatutDetailChart [diagramName]="'etat-projet-par-statut-detail'" [ChartOptions]="ChartOptions2"></app-line-chart>
   </div>
 
-  <hr class="separator">
-</div>
-
-<div class="container">
-    <div class="etat-projet-par-cause-alerte diagram">
+  <div class="etat-projet-par-cause-alerte diagram" style="width:31%">
         <h3 class="title">Etat des projets par cause d'alerte</h3>
         <app-line-chart  [diagramName]="'etat-projet-par-cause-alerte'" (dataselect)="onEChart3DataSelect($event)" (dataunselect)="onEChart3DataUnselect()" [ChartOptions]="ChartOptions3"></app-line-chart>
     </div>
-    <div class="nbr-beneficiaires-fct-temps diagram">
+    <div class="nbr-beneficiaires-fct-temps diagram" style="width:22%">
         <h3 class="title">Nombre de bénéficiaires en fonction de temps</h3>
         <app-line-chart  [diagramName]="'nbr-beneficiaires-fct-temps'" [ChartOptions]="ChartOptions6"></app-line-chart>
     </div>
+
 </div>
 
 <div class="container">
+    
+</div>
+
+<div class="container container2">
     <div #etatProjetParCauseAlerteDetail1 class="etat-projet-par-cause-alerte-detail1 diagram">
         <h3 class="title">Pourcentages des bénéficiaires par catégorie</h3>
         <app-line-chart #etatProjetParCauseAlerteDetailChart1 [diagramName]="'etat-projet-par-cause-alerte-detail1'" (dataselect)="onEChart4DataSelect($event)" (dataunselect)="onEChart4DataUnselect()" [ChartOptions]="ChartOptions4"></app-line-chart>
     </div>
         
-    <div #etatProjetParCauseAlerteDetail2 class="etat-projet-par-cause-alerte-detail2 diagram hidden-diagram">
+    <div #etatProjetParCauseAlerteDetail2 class="etat-projet-par-cause-alerte-detail2 diagram">
         <h3 class="title">Pourcentages des bénéficiaires par type</h3>
         <app-line-chart #etatProjetParCauseAlerteDetailChart2 [diagramName]="'etat-projet-par-cause-alerte-detail2'" [ChartOptions]="ChartOptions5"></app-line-chart>
     </div>
