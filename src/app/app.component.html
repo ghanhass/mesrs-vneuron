@@ -1,6 +1,6 @@
 <div class="container">
   <div class="etat-projet-par-statut diagram">
-      <h3>Etat d'avancement des projets par statut</h3>
+      <h3 class="title">Etat d'avancement des projets par statut</h3>
       <app-line-chart  [diagramName]="'etat-projet-par-statut'" (dataselect)="onEChart1DataSelect($event)" (dataunselect)="onEChart1DataUnselect()" [ChartOptions]="ChartOptions1"></app-line-chart>
   </div>
 
@@ -8,13 +8,13 @@
       <h3 class="title"></h3>
       <app-line-chart #etatProjetParStatutDetailChart [diagramName]="'etat-projet-par-statut-detail'" [ChartOptions]="ChartOptions2"></app-line-chart>
   </div>
-</div>
 
-<hr class="separator">
+  <hr class="separator">
+</div>
 
 <div class="container">
     <div class="etat-projet-par-cause-alerte diagram">
-        <h3>Etat des projets par cause d'alerte</h3>
+        <h3 class="title">Etat des projets par cause d'alerte</h3>
         <app-line-chart  [diagramName]="'etat-projet-par-cause-alerte'" (dataselect)="onEChart3DataSelect($event)" (dataunselect)="onEChart3DataUnselect()" [ChartOptions]="ChartOptions3"></app-line-chart>
     </div>
 
@@ -24,8 +24,9 @@
     </div>
 
     <div #etatProjetParCauseAlerteDetail2 class="etat-projet-par-cause-alerte-detail2 diagram hidden-diagram">
-            <h3 class="title">Pourcentages des bénéficiaires par type</h3>
-            <app-line-chart #etatProjetParCauseAlerteDetailChart2 [diagramName]="'etat-projet-par-cause-alerte-detail2'" [ChartOptions]="ChartOptions5"></app-line-chart>
-        </div>
-  
-  </div>
+        <h3 class="title">Pourcentages des bénéficiaires par type</h3>
+        <app-line-chart #etatProjetParCauseAlerteDetailChart2 [diagramName]="'etat-projet-par-cause-alerte-detail2'" [ChartOptions]="ChartOptions5"></app-line-chart>
+    </div>
+
+    <hr class="separator">
+</div>
