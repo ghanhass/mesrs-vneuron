@@ -78,14 +78,13 @@ app-line-chart{
   display:none;
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:880px){
   .container{
     flex-direction: column;
   }
 
-  .diagram{
-    width:100%;
-    padding: 0;
+  .container .diagram{
+    width:100% !important;
     margin-bottom:15px;
   }
 }

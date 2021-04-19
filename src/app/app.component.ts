@@ -350,15 +350,16 @@ ChartOptions7: any = {
   },
   grid: {
       top:25,
-      left: 10,
-      right: 30,
-      bottom: 15,
+      left: 5,
+      right: 40,
+      bottom: 0,
       containLabel: true
   },
   xAxis: {
       type: 'value',
       axisLabel: {
-        formatter: '{value} M.DT'
+        formatter: '{value} M.DT',
+        rotate:-45
       },
   },
   yAxis: {
@@ -547,7 +548,9 @@ onEChart1DataSelect(data){
     this.ChartOptions2.yAxis.data = projectNames;
     this.ChartOptions2.series[0].data = dataValues;
 
-    this.etatProjetParStatutDetailChart.chartInstance.getDom().scrollIntoView(false);
+    if(window.innerWidth <= 880){
+      this.etatProjetParStatutDetailChart.chartInstance.getDom().scrollIntoView(false);
+    }
 
     this.etatProjetParStatutDetailChart.chartInstance.setOption(this.ChartOptions2);
 
@@ -573,67 +576,9 @@ onEChart1DataUnselect(){
 }
 
 onEChart3DataSelect(data){
-  /*console.log("onEChart3DataSelect data = ", data);
-  this.selectedDataIndex3 = data;
-  let etatProjetParCauseAlerteDetail1_EL: HTMLElement = this.etatProjetParCauseAlerteDetail1.nativeElement;
-  if(etatProjetParCauseAlerteDetail1_EL){
-    etatProjetParCauseAlerteDetail1_EL.classList.remove("hidden-diagram");
-
-    let echart3Data = this.ChartOptions3.series[0].data[this.selectedDataIndex3];
-
-    let echart3DataName = echart3Data.name;
-    //this.echart2Title = "Projets en statut '"+echart1DataName+"'";
-
-    let title = {
-      subtext: echart3DataName,
-      //subtext: echart3DataName,
-      left: 'center',
-      subtextStyle: {
-        fontSize:13
-      }
-    };
-
-  
-    let newEchart4Data = (this.mockServerService.db[1].data as Array<any>).filter((el)=>{
-      return echart3DataName == el.dependencyDiagramDataName;
-    });
-
-    let projectNames = newEchart4Data.map((el)=>{return el.name});
-    let dataValues = newEchart4Data.map((el)=>{return el.data});
-
-    console.log("projectNames = ", projectNames);
-
-    console.log("dataValues = ", dataValues);
-
-    this.ChartOptions4.title = title;
-    this.ChartOptions4.xAxis.data = projectNames;
-    this.ChartOptions4.series[0].data = dataValues;
-
-    //unselect etat-projet-par-cause-alerte-detail1
-    this.etatProjetParCauseAlerteDetailChart1.chartInstance.dispatchAction({type: "unselect"});
-    
-    this.etatProjetParCauseAlerteDetailChart1.chartInstance.getDom().scrollIntoView(false);
-
-    this.etatProjetParCauseAlerteDetailChart1.chartInstance.setOption(this.ChartOptions4);
-
-    //rehide etat-projet-par-cause-alerte-detail2 
-
-
-    console.log("echart3DataName = ", echart3DataName);
-    console.log("newEchart4Data = ", newEchart4Data);
-  }*/
 }
 
 onEChart3DataUnselect(){
-  this.selectedDataIndex3 = undefined;
-  /*
-  let etatProjetParCauseAlerteDetail1_El: HTMLElement = this.etatProjetParCauseAlerteDetail1.nativeElement;
-  if(etatProjetParCauseAlerteDetail1_El){
-    etatProjetParCauseAlerteDetail1_El.classList.add("hidden-diagram");
-  }
-  
-  this.etatProjetParCauseAlerteDetailChart1.chartInstance.dispatchAction({type: "unselect"});
-  this.etatProjetParCauseAlerteDetailChart2.chartInstance.dispatchAction({type: "unselect"});*/
 }
 
 onEChart4DataSelect(data){
@@ -673,7 +618,9 @@ onEChart4DataSelect(data){
     this.ChartOptions5.xAxis.data = projectNames;
     this.ChartOptions5.series[0].data = dataValues;
 
-    this.etatProjetParCauseAlerteDetailChart2.chartInstance.getDom().scrollIntoView(false);
+    if(window.innerWidth <= 880){
+      this.etatProjetParCauseAlerteDetailChart2.chartInstance.getDom().scrollIntoView(false);
+    }
 
     this.etatProjetParCauseAlerteDetailChart2.chartInstance.setOption(this.ChartOptions5);
 
@@ -731,7 +678,9 @@ onEChart7DataSelect(data){
       return {value :dataValues[index], name: name}
     });
 
-    //this.etatBudgetParCategorieDetailChart1.chartInstance.getDom().scrollIntoView(false);
+    if(window.innerWidth <= 880){
+      this.etatBudgetParCategorieDetailChart1.chartInstance.getDom().scrollIntoView(false);
+    }
 
     this.etatBudgetParCategorieDetailChart1.chartInstance.setOption(this.ChartOptions8);
 
@@ -788,7 +737,9 @@ onEChart8DataSelect(data){
         return {value :dataValues[index], name: name}
       });
 
-      //this.etatBudgetParCategorieDetailChart1.chartInstance.getDom().scrollIntoView(false);
+      if(window.innerWidth <= 880){
+        this.etatBudgetParCategorieDetailChart2.chartInstance.getDom().scrollIntoView(false);
+      }
 
       this.etatBudgetParCategorieDetailChart2.chartInstance.setOption(this.ChartOptions9);
     }
