@@ -317,8 +317,8 @@ onEChart3DataSelect(data){
       subtext: echart3DataName,
       //subtext: echart3DataName,
       left: 'center',
-      textStyle: {
-        overflow: "break"
+      subtextStyle: {
+        fontSize:13
       }
     };
     etatProjetParCauseAlerteDetail1_EL.querySelector(".title").textContent = "Pourcentages des bénéficiaires par catégorie";

@@ -27,6 +27,7 @@ app-line-chart{
   display: flex;
   position: relative;
   justify-content: space-between;
+  margin-bottom:20px;
 }
 
 .hidden-diagram{
@@ -43,5 +44,6 @@ app-line-chart{
   .diagram{
     width:100%;
     padding: 0;
+    margin-bottom:15px;
   }
 }
