@@ -298,6 +298,26 @@ ChartOptions5: any = {
   ]
 };
 
+ChartOptions6: any = {
+  tooltip: {
+    trigger: 'axis',
+    formatter: '{b}: {c}%',
+  },
+  xAxis: {
+      type: 'category',
+      data: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+      
+  },
+  yAxis: {
+      type: 'value',
+      max:100
+  },
+  series: [{
+      data: [60, 20, 10, 50, 50, 40, 50, 50],
+      type: 'line'
+  }]
+};
+
 selectedDataIndex1:number = undefined;
 
 selectedDataIndex3:number = undefined;
@@ -351,7 +371,7 @@ onEChart1DataSelect(data){
     this.ChartOptions2.series[0].data = dataValues;
 
     this.etatProjetParStatutDetailChart.chartInstance.getDom().scrollIntoView(false);
-    
+
     this.etatProjetParStatutDetailChart.chartInstance.setOption(this.ChartOptions2);
 
 

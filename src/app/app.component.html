@@ -17,6 +17,10 @@
         <h3 class="title">Etat des projets par cause d'alerte</h3>
         <app-line-chart  [diagramName]="'etat-projet-par-cause-alerte'" (dataselect)="onEChart3DataSelect($event)" (dataunselect)="onEChart3DataUnselect()" [ChartOptions]="ChartOptions3"></app-line-chart>
     </div>
+    <div class="nbr-beneficiaires-fct-temps diagram">
+        <h3 class="title">Nombre de bénéficiaires en fonction de temps</h3>
+        <app-line-chart  [diagramName]="'nbr-beneficiaires-fct-temps'" [ChartOptions]="ChartOptions6"></app-line-chart>
+    </div>
 </div>
 
 <div class="container">
