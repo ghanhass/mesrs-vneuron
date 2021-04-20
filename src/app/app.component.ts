@@ -611,6 +611,136 @@ ChartOptions11: any =  {
   }]
 }
 
+ChartOptions12: any = {
+  /*color:["#5470c6"],*/
+  tooltip: {
+      trigger: 'item',
+      formatter: '{c} Millions DT',
+  },
+  title:{
+    show:true,
+    text:"Etat du budget par status",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
+  legend: {
+      selectedMode:false,
+      show:false
+  },
+  grid: {
+      top:25,
+      left: 5,
+      right: 40,
+      bottom: 0,
+      containLabel: true
+  },
+  xAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} M.DT',
+        rotate:-45
+      },
+  },
+  yAxis: {
+      type: 'category',
+      data: [
+        "Estimé",
+        "Engagé",
+        "Encaisé",
+        "Réalisé",
+      ],
+  },
+  series: [
+      {
+        name: 'Avancement des projets',
+        type: 'bar',
+        
+        label: {
+            show: false,
+            formatter: '{c} M.DT',
+        },
+        data: [100, 20, 40, 25],
+      },
+  ]
+};
+
+ChartOptions13: any = {
+  tooltip: {
+      trigger: 'axis',
+      axisPointer: {            // Use axis to trigger tooltip
+          type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
+      },
+      //formatter: '{a0}, {b0}, {c0}, {d0}\n{a1}, {b1}, {c1}, {d1}',
+  },
+  title:{
+    show:true,
+    text:"Etat budgétaire par sponseur",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
+  legend: {
+    data: ['Encaisé', 'Non encaisé'],
+    selectedMode:false,
+    //top:"10%",
+    bottom:0,
+    left:"center",
+    right:"center",
+    width:"100%"
+  },
+  grid: {
+    top:"10%",
+    left: 5,
+    right: 20,
+    bottom: 20,
+    containLabel: true
+  },
+  xAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} M.DT',
+        rotate:45
+      },
+  },
+  yAxis: {
+      type: 'category',
+      data: ['Estimation budgétaire\nPartenaire Industriel', 'Estimation budgétaire\nEESR/CR', 'Estimation budgétaire\nPAQ']
+  },
+  series: [
+      {
+          name: 'Encaisé',
+          type: 'bar',
+          stack: 'total',
+          label: {
+              show: true
+          },
+          emphasis: {
+              focus: 'series'
+          },
+          data: [320, 302, 301]
+      },
+      {
+          name: 'Non encaisé',
+          type: 'bar',
+          stack: 'total',
+          label: {
+              show: true
+          },
+          emphasis: {
+              focus: 'series'
+          },
+          data: [120, 132, 101]
+      }
+  ]
+}
+
 
 selectedDataIndex1:number = undefined;
 
@@ -662,6 +792,7 @@ onDashboardChange(event){
     el1.classList.add("hide");
     el2.classList.remove("hide");
   }
+  window.dispatchEvent(new CustomEvent('customresize', {bubbles: true, cancelable:false}));
 }
 
 

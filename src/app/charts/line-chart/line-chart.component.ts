@@ -573,4 +573,18 @@ export class LineChartComponent implements AfterViewInit{
 
   }
 
+  @HostListener("window:customresize", ["$event"])
+  onWindowCustomResize(event){
+    let newWindowWidth = window.innerWidth;
+    let newWindowHeight = window.innerHeight;
+      if(this.echartsElRef.nativeElement){
+        this.dataunselect.emit();
+        this.chartInstance.dispose();
+        this.chartInstance = init(this.echartsElRef.nativeElement, "myTheme");
+        this.chartInstance.setOption(this.ChartOptions);
+        this.onChartInit(this.chartInstance);
+      }
+
+  }
+
 }

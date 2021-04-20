@@ -53,15 +53,27 @@
                       </div> 
                   
                   </div>
+                
     </div>
+    <div class="chefprojet-dashboard-container hide">
+            <div class="container container3">
+                <div class="taux-objectifs-atteints diagram">
+                    <app-line-chart  [diagramName]="'taux-objectifs-atteints'" [ChartOptions]="ChartOptions10"></app-line-chart>
+                </div>
+                <div class="taux-objectifs-atteints diagram">
+                        <app-line-chart  [diagramName]="'taux-objectifs-atteints'" [ChartOptions]="ChartOptions11"></app-line-chart>
+                </div>
+            </div>
+            <div class="chefprojet-dashboard-container">
+                    <div class="container container2">
+                        <div class="etat-budgetaire-par-statut diagram">
+                            <app-line-chart  [diagramName]="'etat-budgetaire-par-statut'" [ChartOptions]="ChartOptions12"></app-line-chart>
+                        </div>
 
-    <div class="chefprojet-dashboard-container">
-        <div class="container container1">
-            <div class="taux-objectifs-atteints diagram">
-                <app-line-chart  [diagramName]="'taux-objectifs-atteints'" [ChartOptions]="ChartOptions10"></app-line-chart>
-            </div>
-            <div class="taux-objectifs-atteints diagram">
-                    <app-line-chart  [diagramName]="'taux-objectifs-atteints'" [ChartOptions]="ChartOptions11"></app-line-chart>
-            </div>
+                        <div class="etat-budgetaire-par-statut diagram">
+                                <app-line-chart  [diagramName]="'etat-budgetaire-par-statut'" [ChartOptions]="ChartOptions13"></app-line-chart>
+                            </div>
+        
+                    </div>
+                </div>
         </div>
-</div>

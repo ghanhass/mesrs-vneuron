@@ -110,11 +110,11 @@ app-line-chart{
 }
 
 @media screen and (max-width:880px){
-  .container{
+  :host ::ng-deep .container{
     flex-direction: column;
   }
 
-  .container .diagram{
+  :host ::ng-deep .container .diagram{
     width:100% !important;
     margin-bottom:15px;
   }
