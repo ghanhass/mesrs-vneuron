@@ -478,6 +478,139 @@ ChartOptions9: any =  {
   ],
 };
 
+ChartOptions10: any =  {
+        
+  //color: ["#70ad47", "#ed7d32", "#a5a5a5"],
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b} : {d}%',
+    //formatter: '{a} <br/>{b} : {c} ({d}%)',
+  },
+  title:{
+    show:true,
+    text:"Taux des objectifs atteints",
+    textStyle:{
+      fontSize:14,
+      overflow:"break"
+    },
+    left:"center",
+    right:"center"
+  },
+  legend: {
+    data: ['Objectif atteint', 'Objectif non atteint'],
+    selectedMode:false,
+    //top:"10%",
+    bottom:0,
+    left:"center",
+    right:"center",
+    width:"100%"
+  },
+  series: [
+    {
+      //name: 'Countries',
+      type: 'pie',
+      radius: '70%',
+      center: ['50%', '45%'],
+      data: [
+        { value: 40, name: 'Objectif atteint'},
+        { value: 60, name: 'Objectif non atteint'},
+      ],
+
+      label: {
+        show:false
+      },
+      labelLine: {
+        show:false
+      }
+    },
+  ],
+};
+
+
+ChartOptions11: any =  {
+  series: [{
+      type: 'gauge',
+      startAngle: 180,
+      endAngle: 0,
+      min: 0,
+      max: 1,
+      splitNumber: 8,
+      axisLine: {
+          lineStyle: {
+              width: 25,
+              color: [
+                  [0.33, '#7CFFB2'],
+                  [0.66, '#FDDD60'],
+                  [1, '#FF6E76']
+              ]
+          }
+      },
+      pointer: {
+          icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+          length: '12%',
+          width: 20,
+          offsetCenter: [0, '-60%'],
+          itemStyle: {
+              color: '#464646'
+          }
+      },
+      axisTick: {
+          length: 12,
+          lineStyle: {
+              color: 'auto',
+              width: 2
+          }
+      },
+      splitLine: {
+          length: 20,
+          lineStyle: {
+              color: 'auto',
+              width: 5
+          }
+      },
+      axisLabel: {
+          show:false,
+          color: '#464646',
+          fontSize: 20,
+          distance: -60,
+          formatter: function (value) {
+              if (value === 0.875) {
+                  return 'A';
+              }
+              else if (value === 0.625) {
+                  return 'B';
+              }
+              else if (value === 0.375) {
+                  return 'C';
+              }
+              else if (value === 0.125) {
+                  return 'D';
+              }
+          }
+      },
+      title: {
+          offsetCenter: [0, '-110%'],
+          textStyle:{
+            fontSize:14,
+            overflow:"break"
+          },
+      },
+      detail: {
+          fontSize: 30,
+          offsetCenter: [0, -15],
+          valueAnimation: true,
+          formatter: function (value) {
+              return Math.round(value * 100) + '%';
+          },
+          color: '#464646'
+      },
+      data: [{
+          value: 0.36,
+          name: 'Avancement du projet en fct du temps'
+      }]
+  }]
+}
+
 
 selectedDataIndex1:number = undefined;
 
