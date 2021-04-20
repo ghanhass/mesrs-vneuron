@@ -736,6 +736,189 @@ ChartOptions13: any = {
   ]
 }
 
+ChartOptions14: any = {
+  series: [{
+      radius:"50%",
+      type: 'gauge',
+      progress: {
+          show: true,
+          width: 18,
+      },
+      axisLine: {
+          lineStyle: {
+              width: 18,
+          }
+      },
+      axisTick: {
+          show: false
+      },
+      splitLine: {
+          length: 15,
+          lineStyle: {
+              width: 2,
+              color: '#999'
+          },
+          show:false
+      },
+      pointer:{
+          show:false
+      },
+      axisLabel: {
+          distance: 25,
+          color: '#999',
+          fontSize: 20,
+          show:false
+      },
+      anchor: {
+          show: false,
+          showAbove: false,
+          size: 25,
+          itemStyle: {
+              borderWidth: 10
+          }
+      },
+      title: {
+          show: true,
+          offsetCenter: [0, '100%'],
+          fontSize: 20
+      },
+      detail: {
+          valueAnimation: true,
+          offsetCenter: [0, 0],
+          fontSize: 40,
+          formatter: function (value) {
+           return Math.round(value) + '%';
+        },
+      },
+      data: [{
+          value: 30,
+          name: 'R1'
+      }]
+  }]
+};
+
+ChartOptions15: any = {
+  series: [{
+      radius:"50%",
+      type: 'gauge',
+      progress: {
+          show: true,
+          width: 18,
+      },
+      axisLine: {
+          lineStyle: {
+              width: 18,
+          }
+      },
+      axisTick: {
+          show: false
+      },
+      splitLine: {
+          length: 15,
+          lineStyle: {
+              width: 2,
+              color: '#999'
+          },
+          show:false
+      },
+      pointer:{
+          show:false
+      },
+      axisLabel: {
+          distance: 25,
+          color: '#999',
+          fontSize: 20,
+          show:false
+      },
+      anchor: {
+          show: false,
+          showAbove: false,
+          size: 25,
+          itemStyle: {
+              borderWidth: 10
+          }
+      },
+      title: {
+          show: true,
+          offsetCenter: [0, '100%'],
+          fontSize: 20
+      },
+      detail: {
+          valueAnimation: true,
+          offsetCenter: [0, 0],
+          fontSize: 40,
+          formatter: function (value) {
+           return Math.round(value) + '%';
+        },
+      },
+      data: [{
+          value: 40,
+          name: 'R2'
+      }]
+  }]
+};
+
+ChartOptions16: any = {
+  series: [{
+      radius:"50%",
+      type: 'gauge',
+      progress: {
+          show: true,
+          width: 18,
+      },
+      axisLine: {
+          lineStyle: {
+              width: 18,
+          }
+      },
+      axisTick: {
+          show: false
+      },
+      splitLine: {
+          length: 15,
+          lineStyle: {
+              width: 2,
+              color: '#999'
+          },
+          show:false
+      },
+      pointer:{
+          show:false
+      },
+      axisLabel: {
+          distance: 25,
+          color: '#999',
+          fontSize: 20,
+          show:false
+      },
+      anchor: {
+          show: false,
+          showAbove: false,
+          size: 25,
+          itemStyle: {
+              borderWidth: 10
+          }
+      },
+      title: {
+          show: true,
+          offsetCenter: [0, '100%'],
+          fontSize: 20
+      },
+      detail: {
+          valueAnimation: true,
+          offsetCenter: [0, 0],
+          fontSize: 40,
+          formatter: function (value) {
+           return Math.round(value) + '%';
+        },
+      },
+      data: [{
+          value: 50,
+          name: 'R3'
+      }]
+  }]
+};
+
 
 selectedDataIndex1:number = undefined;
 
