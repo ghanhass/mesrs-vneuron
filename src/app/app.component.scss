@@ -132,7 +132,21 @@ app-line-chart{
   padding-top: 42px;
 }
 
+
+@media screen and (max-width:1090px)
+{
+  .diagrams-par-objectif-container{
+    
+    width:370px;
+  }
+  
+}
+
 @media screen and (max-width:880px){
+  .diagrams-par-objectif-container{
+    margin:auto;
+  }
+
   :host ::ng-deep .container{
     flex-direction: column;
   }
