@@ -89,6 +89,7 @@ app-line-chart{
   box-shadow: 0 0 3px 1px #80808087;
   display:flex;
   align-items: center;
+  padding: 0px 2px;
 }
 
 .dashboard-select{
@@ -97,8 +98,12 @@ app-line-chart{
 }
 
 .header .logo-wrapper {
-  height: 100%;
+  height: calc(100% - 4px);
   margin-right:20px;
+}
+.header .logo-wrapper a {
+  height: 100%;
+  display:block;
 }
 
 .header .logo-wrapper img {
