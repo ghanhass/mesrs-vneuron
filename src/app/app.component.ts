@@ -529,6 +529,7 @@ ChartOptions10: any =  {
 
 ChartOptions11: any =  {
   series: [{
+    radius:"60%",
       type: 'gauge',
       startAngle: 180,
       endAngle: 0,
@@ -551,59 +552,57 @@ ChartOptions11: any =  {
           }
       },
       axisTick: {
-          length: 12,
-          lineStyle: {
-              color: 'auto',
-              width: 2
-          }
-      },
-      splitLine: {
-          length: 20,
-          lineStyle: {
-              color: 'auto',
-              width: 5
-          }
-      },
-      axisLabel: {
-          show:false,
-          color: '#464646',
-          fontSize: 20,
-          distance: -60,
-          formatter: function (value) {
-              if (value === 0.875) {
-                  return 'A';
-              }
-              else if (value === 0.625) {
-                  return 'B';
-              }
-              else if (value === 0.375) {
-                  return 'C';
-              }
-              else if (value === 0.125) {
-                  return 'D';
-              }
-          }
-      },
-      title: {
-          offsetCenter: [0, '-110%'],
-          textStyle:{
-            fontSize:14,
-            overflow:"break"
-          },
-      },
-      detail: {
-          fontSize: 30,
-          offsetCenter: [0, -15],
-          valueAnimation: true,
-          formatter: function (value) {
-              return Math.round(value * 100) + '%';
-          },
-          color: '#464646'
-      },
-      data: [{
-          value: 0.36,
-          name: 'Avancement du projet en fct du temps'
-      }]
+        length: 12,
+        lineStyle: {
+            color: 'auto',
+            width: 2
+        }
+    },
+    splitLine: {
+        length: 20,
+        lineStyle: {
+            color: 'auto',
+            width: 5
+        }
+    },
+    axisLabel: {
+        show:true,
+        color: '#464646',
+        fontSize: 17,
+        distance: -110,
+        formatter: function (value) {
+            if (value === 1) {
+                return 'Dec 2021';
+            }
+            else if (value === 0.625) {
+                return 'Juin 2021';
+            }
+            else if (value === 0.375) {
+                return 'Dec 2020';
+            }
+            else if (value === 0) {
+                return 'Juin 2020';
+            }
+        }
+    },
+    title: {
+        offsetCenter: [0, '50%'],
+        fontSize: 20
+    },
+    detail: {
+        fontSize: 40,
+        offsetCenter: [0, -15],
+        valueAnimation: true,
+        formatter: function (value) {
+            //return Math.round(value * 100) + '%';
+            return '40%';
+        },
+        color: '#464646'
+    },
+    data: [{
+        value: 0.625,
+        name: 'Avancement du projet en fct du temps'
+    }]
   }]
 }
 
