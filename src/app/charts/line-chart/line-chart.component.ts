@@ -508,7 +508,7 @@ export class LineChartComponent implements AfterViewInit{
     let self = this;
     
     this.chartInstance = e;
-    console.log('on chart init:', e);
+    //console.log('on chart init:', e);
     this.chartInstance.getDom().classList.add(this.chartInstance.getId());
     if(!this.isThemeSet){
       this.chartInstance.dispose();
@@ -520,7 +520,7 @@ export class LineChartComponent implements AfterViewInit{
     let seriesArr: any = this.ChartOptions.series;
     if(seriesArr.length){
       this.chartInstance.on('selectchanged', function (params: any) {
-        console.log("chart selectchanged = ",params);
+        //console.log("chart selectchanged = ",params);
         let selectedDataIndex = params.fromActionPayload.dataIndexInside;
         let selectType = params.fromAction;
 
