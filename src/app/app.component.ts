@@ -538,11 +538,7 @@ ChartOptions11: any =  {
       axisLine: {
           lineStyle: {
               width: 25,
-              color: [
-                  [0.33, '#7CFFB2'],
-                  [0.66, '#FDDD60'],
-                  [1, '#FF6E76']
-              ]
+              color: this.mockServerService.getGaugeGradientColoration()
           }
       },
       pointer: {
