@@ -60,7 +60,7 @@
                 <div class="taux-objectifs-atteints diagram" style="width:300px">
                     <app-line-chart  [diagramName]="'taux-objectifs-atteints'" [ChartOptions]="ChartOptions10"></app-line-chart>
                 </div>
-                <div class="taux-objectifs-atteints diagram" style="height:370px">
+                <div class="speed-meter diagram" style="height:370px">
                         <app-line-chart  [diagramName]="'taux-objectifs-atteints'" [ChartOptions]="ChartOptions11"></app-line-chart>
                 </div>
                 <div class="diagrams-par-objectif-container">
@@ -93,27 +93,30 @@
                         <!----><div class="container container4">
                             
             
-                        </div>-->
+                        </div>
 
-                        <div class="container container4">
-                                <h3 style="width: 100%;text-align: center;margin-bottom: -19px;font-family: sans-serif;">Taux des satisfactions des formations</h3>
-                                <div class="taux-satisfaction-formations formation1 diagram">
-                                    <div class="white-part">
+                        <div class="container taux-satisfaction-formations-container">
+                                <h3 style="width: 100%;text-align: center;font-family: sans-serif;">Taux des satisfactions des formations</h3>
+                                <select class="formations-select" (change)="onFormationsSelect($event)">
+                                    <option value="1">Formation 1</option>
+                                    <option value="2">Formation 2</option>
+                                </select>
+                                <div class="taux-satisfaction-formations-wrapper">
 
+                                    <div class="taux-satisfaction-formations-parent">
+                                            <div class="formation-title">Enseignant</div>
+                                            <div class="taux-satisfaction-formations formation1" style="background:#fc6f00">
+                                                    <div class="percentage" >30%</div>
+                             
+                                                </div>
                                     </div>
-                                    <div class="colored-part">
-
-                                    </div>
-             
-                                </div>
-        
-                                <div class="taux-satisfaction-formations formation1 diagram">
-                                        <div class="white-part">
-
+                    
+                                    <div class="taux-satisfaction-formations-parent">
+                                            <div class="formation-title">Etudiant</div>
+                                            <div class="taux-satisfaction-formations formation2" style="background:#bac900">
+                                                    <div class="percentage">70%</div>
                                             </div>
-                                            <div class="colored-part">
-        
-                                            </div>
+                                        </div>
                                 </div>
                 
                             </div>

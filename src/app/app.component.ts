@@ -930,6 +930,26 @@ selectedDataIndex7:number = undefined;
 
 selectedDataIndex8:number = undefined;
 
+formationsDb: any = [
+  {
+  color:"#fc6f00",
+  percentage:70
+},
+{
+  color:"#bac900",
+  percentage:30
+},
+
+{
+  color:"#8ae500",
+  percentage:14
+},
+{
+  color:"#ff4b00",
+  percentage:86
+}
+
+]
 echart2Title: string = "";
 
 @ViewChild("etatProjetParStatutDetail") etatProjetParStatutDetail: ElementRef;
@@ -1214,5 +1234,30 @@ onEChart8DataUnselect(){
   this.etatBudgetParCategorieDetailChart2.chartInstance.setOption(this.ChartOptions9);
   this.etatBudgetParCategorieDetailChart2.chartInstance.dispatchAction({type: "unselect"});
 }
+
+onFormationsSelect(event){
+  let newValue = event.target.value
+  if(newValue == "2"){
+    (document.querySelector(".taux-satisfaction-formations.formation1") as HTMLElement).style.background = "#ff4b00";
+
+    (document.querySelector(".taux-satisfaction-formations.formation1 .percentage") as HTMLElement).textContent = "86";
+
+    (document.querySelector(".taux-satisfaction-formations.formation2") as HTMLElement).style.background = "#8ae500";
+
+    (document.querySelector(".taux-satisfaction-formations.formation2 .percentage") as HTMLElement).textContent = "14";
+  }
+  else if(newValue == "1"){
+
+    (document.querySelector(".taux-satisfaction-formations.formation1") as HTMLElement).style.background = "#fc6f00";
+
+    (document.querySelector(".taux-satisfaction-formations.formation1 .percentage") as HTMLElement).textContent = "70";
+
+
+    (document.querySelector(".taux-satisfaction-formations.formation2") as HTMLElement).style.background = "#bac900";
+
+    (document.querySelector(".taux-satisfaction-formations.formation2 .percentage") as HTMLElement).textContent = "30";
+  }
+}
+
 
 }
