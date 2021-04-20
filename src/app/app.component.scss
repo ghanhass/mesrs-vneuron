@@ -23,6 +23,16 @@
 
 .diagrams-par-objectif-container{
   display:flex;
+  flex-direction: column;
+  width:500px;
+}
+
+.speed-meter{
+  flex-grow: 1;
+}
+
+.diagrams-par-objectif-wrapper{
+  display:flex;
 }
 
 app-line-chart{
