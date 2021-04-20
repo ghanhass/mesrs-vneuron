@@ -1240,22 +1240,22 @@ onFormationsSelect(event){
   if(newValue == "2"){
     (document.querySelector(".taux-satisfaction-formations.formation1") as HTMLElement).style.background = "#ff4b00";
 
-    (document.querySelector(".taux-satisfaction-formations.formation1 .percentage") as HTMLElement).textContent = "86";
+    (document.querySelector(".taux-satisfaction-formations.formation1 .percentage") as HTMLElement).textContent = "86%";
 
     (document.querySelector(".taux-satisfaction-formations.formation2") as HTMLElement).style.background = "#8ae500";
 
-    (document.querySelector(".taux-satisfaction-formations.formation2 .percentage") as HTMLElement).textContent = "14";
+    (document.querySelector(".taux-satisfaction-formations.formation2 .percentage") as HTMLElement).textContent = "14%";
   }
   else if(newValue == "1"){
 
     (document.querySelector(".taux-satisfaction-formations.formation1") as HTMLElement).style.background = "#fc6f00";
 
-    (document.querySelector(".taux-satisfaction-formations.formation1 .percentage") as HTMLElement).textContent = "70";
+    (document.querySelector(".taux-satisfaction-formations.formation1 .percentage") as HTMLElement).textContent = "70%";
 
 
     (document.querySelector(".taux-satisfaction-formations.formation2") as HTMLElement).style.background = "#bac900";
 
-    (document.querySelector(".taux-satisfaction-formations.formation2 .percentage") as HTMLElement).textContent = "30";
+    (document.querySelector(".taux-satisfaction-formations.formation2 .percentage") as HTMLElement).textContent = "30%";
   }
 }
 
