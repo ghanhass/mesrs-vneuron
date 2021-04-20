@@ -21,6 +21,10 @@
   /*margin-right:15px;*/
 }
 
+.diagrams-par-objectif-container{
+  display:flex;
+}
+
 app-line-chart{
   width:calc(100%);
   /*flex-grow: 1;*/

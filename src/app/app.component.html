@@ -56,12 +56,24 @@
                 
     </div>
     <div class="chefprojet-dashboard-container hide">
-            <div class="container container3">
-                <div class="taux-objectifs-atteints diagram">
+            <div class="container">
+                <div class="taux-objectifs-atteints diagram" style="width:300px">
                     <app-line-chart  [diagramName]="'taux-objectifs-atteints'" [ChartOptions]="ChartOptions10"></app-line-chart>
                 </div>
                 <div class="taux-objectifs-atteints diagram" style="height:370px">
                         <app-line-chart  [diagramName]="'taux-objectifs-atteints'" [ChartOptions]="ChartOptions11"></app-line-chart>
+                </div>
+                <div class="diagrams-par-objectif-container">
+                        <div class="etat-budgetaire-par-statut diagram" style="width:200px">
+                                <app-line-chart  [diagramName]="'etat-budgetaire-par-statut'" [ChartOptions]="ChartOptions14"></app-line-chart>
+                            </div>
+    
+                            <div class="etat-budgetaire-par-statut diagram" style="width:200px">
+                                    <app-line-chart  [diagramName]="'etat-budgetaire-par-statut'" [ChartOptions]="ChartOptions15"></app-line-chart>
+                            </div>
+                            <div class="etat-budgetaire-par-statut diagram" style="width:200px">
+                                <app-line-chart  [diagramName]="'etat-budgetaire-par-statut'" [ChartOptions]="ChartOptions16"></app-line-chart>
+                            </div>
                 </div>
             </div>
                     <div class="container container2">
@@ -75,19 +87,33 @@
         
                     </div>
                 
-                        <div class="container container4">
+                        <!----><div class="container container4">
                             <h3 style="width: 100%;text-align: center;margin-bottom: -19px;font-family: sans-serif;">Etat d'avancement du projet par objectif</h3>
-                            <div class="etat-budgetaire-par-statut diagram">
-                                <app-line-chart  [diagramName]="'etat-budgetaire-par-statut'" [ChartOptions]="ChartOptions14"></app-line-chart>
-                            </div>
-    
-                            <div class="etat-budgetaire-par-statut diagram">
-                                    <app-line-chart  [diagramName]="'etat-budgetaire-par-statut'" [ChartOptions]="ChartOptions15"></app-line-chart>
-                            </div>
-                            <div class="etat-budgetaire-par-statut diagram">
-                                <app-line-chart  [diagramName]="'etat-budgetaire-par-statut'" [ChartOptions]="ChartOptions16"></app-line-chart>
-                            </div>
+                            
             
-                        </div>
+                        </div>-->
+
+                        <div class="container container4">
+                                <h3 style="width: 100%;text-align: center;margin-bottom: -19px;font-family: sans-serif;">Taux des satisfactions des formations</h3>
+                                <div class="taux-satisfaction-formations formation1 diagram">
+                                    <div class="white-part">
+
+                                    </div>
+                                    <div class="colored-part">
+
+                                    </div>
+             
+                                </div>
+        
+                                <div class="taux-satisfaction-formations formation1 diagram">
+                                        <div class="white-part">
+
+                                            </div>
+                                            <div class="colored-part">
+        
+                                            </div>
+                                </div>
+                
+                            </div>
 
         </div>

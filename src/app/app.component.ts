@@ -741,14 +741,14 @@ ChartOptions14: any = {
       radius:"50%",
       type: 'gauge',
       progress: {
-          show: true,
-          width: 18,
-      },
-      axisLine: {
-          lineStyle: {
-              width: 18,
-          }
-      },
+        show: true,
+        width: 9,
+    },
+    axisLine: {
+        lineStyle: {
+            width: 9,
+        }
+    },
       axisTick: {
           show: false
       },
@@ -785,7 +785,7 @@ ChartOptions14: any = {
       detail: {
           valueAnimation: true,
           offsetCenter: [0, 0],
-          fontSize: 40,
+          fontSize: 20,
           formatter: function (value) {
            return Math.round(value) + '%';
         },
@@ -802,14 +802,14 @@ ChartOptions15: any = {
       radius:"50%",
       type: 'gauge',
       progress: {
-          show: true,
-          width: 18,
-      },
-      axisLine: {
-          lineStyle: {
-              width: 18,
-          }
-      },
+        show: true,
+        width: 9,
+    },
+    axisLine: {
+        lineStyle: {
+            width: 9,
+        }
+    },
       axisTick: {
           show: false
       },
@@ -846,7 +846,7 @@ ChartOptions15: any = {
       detail: {
           valueAnimation: true,
           offsetCenter: [0, 0],
-          fontSize: 40,
+          fontSize: 20,
           formatter: function (value) {
            return Math.round(value) + '%';
         },
@@ -863,13 +863,13 @@ ChartOptions16: any = {
       radius:"50%",
       type: 'gauge',
       progress: {
-          show: true,
-          width: 18,
-      },
+        show: true,
+        width: 9,
+    },
       axisLine: {
-          lineStyle: {
-              width: 18,
-          }
+        lineStyle: {
+            width: 9,
+        }
       },
       axisTick: {
           show: false
@@ -907,7 +907,7 @@ ChartOptions16: any = {
       detail: {
           valueAnimation: true,
           offsetCenter: [0, 0],
-          fontSize: 40,
+          fontSize: 20,
           formatter: function (value) {
            return Math.round(value) + '%';
         },
